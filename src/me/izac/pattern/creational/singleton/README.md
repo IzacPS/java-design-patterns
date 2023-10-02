@@ -129,7 +129,7 @@ Bill Pugh utilizado em implementações utilizando versões posteriores ao java 
 o modelo *Enum Singleton* entre outros. Para ver sobre outras implementações visite o 
 artigo [Java Singleton Design Pattern Best Practices with Examples](https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples).
 
-Referências
+## Referências
 - https://www.baeldung.com/java-singleton-double-checked-locking
 - https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples
 - https://dzone.com/articles/java-singletons-using-enum
