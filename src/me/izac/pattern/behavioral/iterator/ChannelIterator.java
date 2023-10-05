@@ -2,7 +2,7 @@ package me.izac.pattern.behavioral.iterator;
 
 public interface ChannelIterator {
 
-	public boolean hasNext();
+	boolean hasNext();
 	
-	public Channel next();
+	Channel next();
 }

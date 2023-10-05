@@ -12,7 +12,7 @@ public class Cedula50Controlador implements GavetaControlador {
         if(dinheiroAtual.getQuantidade() >= 50){
             int num = dinheiroAtual.getQuantidade()/50;
             int resto = dinheiroAtual.getQuantidade() % 50;
-            System.out.println("Dispensando " + num + "notas de 50R$");
+            System.out.println("Retirando " + num + " cédula(s) de 50R$");
             if(resto != 0) this.cadeia.retirar(new Dinheiro(resto));
         }else{
             this.cadeia.retirar(dinheiroAtual);

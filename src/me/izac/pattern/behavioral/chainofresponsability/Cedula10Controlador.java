@@ -12,7 +12,7 @@ public class Cedula10Controlador implements GavetaControlador {
         if(dinheiroAtual.getQuantidade() >= 10){
             int num = dinheiroAtual.getQuantidade()/10;
             int resto = dinheiroAtual.getQuantidade() % 10;
-            System.out.println("Dispensando " + num + "notas de 50R$");
+            System.out.println("Retirando " + num + " cédula(s) de 10R$");
             if(resto != 0) this.cadeia.retirar(new Dinheiro(resto));
         }else{
             this.cadeia.retirar(dinheiroAtual);
