@@ -1,6 +1,6 @@
 package me.izac.pattern.behavioral.strategy;
 
-public class PaypalStrategy implements PaymentStrategy {
+public class PaypalStrategy implements PagamentoStrategy {
 
 	private String emailId;
 	private String password;
@@ -11,8 +11,8 @@ public class PaypalStrategy implements PaymentStrategy {
 	}
 	
 	@Override
-	public void pay(int amount) {
-		System.out.println(amount + " paid using Paypal.");
+	public void pagamento(int valor) {
+		System.out.println(valor + " Pago(s) com Paypal.");
 	}
 
 }

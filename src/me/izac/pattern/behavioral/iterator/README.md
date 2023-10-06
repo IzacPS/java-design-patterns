@@ -1,6 +1,6 @@
 # Padrões de Design - Iterator
 
-O padrão de design Iterator permite que percorrer de uma forma
+O padrão de design **Iterator** permite que percorrer de uma forma
 padronizada uma coleção de objetos.
 
 Suponha que uma lista de canais de rádio e precisamos percorrer

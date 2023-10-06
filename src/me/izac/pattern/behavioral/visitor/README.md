@@ -1,17 +1,17 @@
 # Padrões de Design - Visitor
 
-O padrão de design **Visitor** utilizamos um objeto que mudará a 
+O padrão de design **Visitor** utilizamos um objeto que mudará a
 execução do algoritmo de um elemento. A execução desse algoritmo
-varia então de acordo com esse objeto. Esse objeto é conhecido como 
-visitor. Com isso, podemos mover logica operacional de um objeto 
+varia então de acordo com esse objeto. Esse objeto é conhecido como
+visitor. Com isso, podemos mover lógica operacional de um objeto
 para outro.
 
-Imagine que temos um carrinho de compras que podemos adicionar 
+Imagine que temos um carrinho de compras que podemos adicionar
 diferentes produtos. Quando clicamos para finalizar a compra, o
-valor tota dos produtos é calculado e mostrado a nós. Se pensarmos
-em uma classe do tipo produto e que podem haver vários produtos do 
+valor total dos produtos é calculado e mostrado a nós. Se pensarmos
+em uma classe do tipo produto e que podem haver vários produtos do
 mesmo tipo dentro do carrinho, podemos calcular o valor total desses
-produtos dentro da propria classe. Podemos mover todo esse calculo
+produtos dentro da própria classe. Podemos mover todo esse cálculo
 dos valores dos produtos para uma classe separada. Essa separação,
 é a ideia principal do padrão visitor.
 
@@ -120,8 +120,8 @@ public class TesteVisitor {
 		CarrinhoDeComprasVisitor visitor = new CarrinhoDeCompras();
 		
 		int total=0;
-		for(Produto item : items){
-			total = total + item.aceitar(visitor);
+		for(Produto produto : items){
+			total = total + produto.aceitar(visitor);
 		}
 		System.out.println("Custo total = " + total);
 	}
@@ -132,3 +132,4 @@ public class TesteVisitor {
 - https://medium.com/xp-inc/design-patterns-parte-25-visitor-159f8fc14e56
 - https://www.digitalocean.com/community/tutorials/visitor-design-pattern-java
 - https://www.tutorialspoint.com/design_pattern/visitor_pattern.htm
+

@@ -1,20 +1,20 @@
 package me.izac.pattern.behavioral.state;
 
-public class TVContext implements State {
+public class TVContext implements Estado {
 
-	private State tvState;
+	private Estado tvEstado;
 
-	public void setState(State state) {
-		this.tvState=state;
+	public void setEstado(Estado estado) {
+		this.tvEstado = estado;
 	}
 
-	public State getState() {
-		return this.tvState;
+	public Estado getState() {
+		return this.tvEstado;
 	}
 
 	@Override
-	public void doAction() {
-		this.tvState.doAction();
+	public void realizarAcao() {
+		this.tvEstado.realizarAcao();
 	}
 
 }

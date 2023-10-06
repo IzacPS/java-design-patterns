@@ -76,7 +76,6 @@ Esse é um exemplo de utilização do padrão de design **Factory**. Mais inform
 o padrão podem ser encontradas nas referências abaixo.
 
 ## Referências
-
 - https://www.digitalocean.com/community/tutorials/factory-design-pattern-in-java
 - https://www.youtube.com/watch?v=EdFq_JIThqM&t=385s
 

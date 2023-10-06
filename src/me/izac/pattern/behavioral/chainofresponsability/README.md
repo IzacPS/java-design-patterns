@@ -1,10 +1,10 @@
 # Padrões de Design - Chain Of Responsability
 
-O padrão de design Chain of Responsibility é usado para evitar o acoplamento
+O padrão de design **Chain of Responsibility** é usado para evitar o acoplamento
 entre objetos em uma cadeia onde esses objetos devem processar uma certa requisição.
 Cada objeto na cadeia tem a capacidade de decidir se ele irá processar a solicitação
 ou se  essa solicitação será enviada para o próximo na objeto na cadeia.
-Como um exemplo desse padrão na linguagem Java.
+Como um exemplo desse padrão na linguagem **Java**.
 
 Podemos observar como os blocos try-catch funcionam. Podemos desenvolver para
 cada bloco catch uma solicitação para processar uma determinada exceção.
@@ -115,7 +115,7 @@ public class Cedula100Controlador implements GavetaControlador {
 
 Agora podemos criar uma corrente de responsabilidades (Chain of Responsability)
 para o nosso caixa eletrônico. Observer o método construtor da classe
-**CaixaEletronico** que cria uma corrente de responsabilidade.
+``CaixaEletronico`` que cria uma corrente de responsabilidade.
 
 ```java
 public class CaixaEletronico {

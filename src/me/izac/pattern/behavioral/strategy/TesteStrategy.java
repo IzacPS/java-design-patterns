@@ -3,19 +3,22 @@ package me.izac.pattern.behavioral.strategy;
 public class TesteStrategy {
 
 	public static void main(String[] args) {
-		ShoppingCart cart = new ShoppingCart();
+		CarrinhoDeCompras cart = new CarrinhoDeCompras();
 		
-		Item item1 = new Item("1234",10);
-		Item item2 = new Item("5678",40);
+		Produto produto1 = new Produto("1234",10);
+		Produto produto2 = new Produto("5678",40);
 		
-		cart.addItem(item1);
-		cart.addItem(item2);
+		cart.adicionarProduto(produto1);
+		cart.adicionarProduto(produto2);
 		
-		//pay by paypal
-		cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
+		//Pagar com Paypal
+		cart.pay(new PaypalStrategy("meuemail@example.com", "password"));
 		
-		//pay by credit card
-		cart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
+		//Pagar com cartão de crédito/débito
+		cart.pay(new CartaoDeCreditoStrategy("Izaias Santos", "1234567890123456", "786", "12/15"));
+
+		//Pagar com Pix
+		cart.pay(new PixStrategy("=UkLHae4t9Y047"));
 	}
 
 }

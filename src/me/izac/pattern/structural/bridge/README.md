@@ -1,6 +1,6 @@
 # Padrões de Design - Bridge
 
-O padrão de design Bridge é um padrão que permite dividir uma classe ou um grande
+O padrão de design **Bridge** é um padrão que permite dividir uma classe ou um grande
 conjunto de classes estreitamente relacionadas nas hierarquias de abstração e
 implementação onde os dois podem variar de forma independente. O padrão traz a ideia
 de utilizar composição sobre herança.

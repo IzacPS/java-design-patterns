@@ -95,6 +95,7 @@ public class TestFacade {
 Veja que só precisamos indicar qual a base que queremos o relatório, qual o tipo de relatório
 que queremos e qual a tabela de origem.
 
+## Referências
 - https://www.digitalocean.com/community/tutorials/facade-design-pattern-in-java
 - https://medium.com/xp-inc/desing-patterns-parte-12-facade-ff66c68f5784
 - https://www.tutorialspoint.com/design_pattern/facade_pattern.htm

@@ -104,7 +104,7 @@ public class DrawingClient extends JFrame {
         HEIGHT = height;
         Container contentPane = getContentPane();
 
-        JButton startButton = new JButton("Draw");
+        JButton startButton = new JButton("Criar");
         final JPanel panel = new JPanel();
 
         contentPane.add(panel, BorderLayout.CENTER);

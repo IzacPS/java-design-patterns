@@ -1,6 +1,6 @@
 # Padrões de Design - Mediator
 
-O padrão de design Mediator é usado quando se precisa de um meio de comunicação centralizado
+O padrão de design **Mediator** é usado quando se precisa de um meio de comunicação centralizado
 entre objetos no sistema. Os objetos que precisam se comunicar devem utilizar esse meio
 centralizado para trocar mensagens, como se fosse um roteador e possui sua própria lógica de
 comunicação.

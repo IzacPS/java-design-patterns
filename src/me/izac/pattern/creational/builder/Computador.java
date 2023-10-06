@@ -12,30 +12,6 @@ public class Computador {
     private boolean placaDeVideoHabilidata;
     private boolean bluetoothHabilitado;
 
-    public String getRAM() {
-        return RAM;
-    }
-
-    public String getHDD() {
-        return HDD;
-    }
-
-    public String getPlacaDeVideo() {
-        return placaDeVideo;
-    }
-
-    public String getProcessador() {
-        return processador;
-    }
-
-    public boolean isPlacaDeVideoHabilidata() {
-        return placaDeVideoHabilidata;
-    }
-
-    public boolean isBluetoothHabilitado() {
-        return bluetoothHabilitado;
-    }
-
     private Computador(ComputadorBuilder builder){
         this.RAM = builder.RAM;
         this.HDD = builder.HDD;

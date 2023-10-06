@@ -49,7 +49,7 @@ public class MeuTopico implements Subject {
 	}
 
 	public void postMessage(String msg){
-		System.out.println("Message Posted to Topic:"+msg);
+		System.out.println("Mensagem postada pelo topico: "+msg);
 		this.message=msg;
 		this.changed=true;
 		notifyObservers();

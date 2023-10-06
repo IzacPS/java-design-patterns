@@ -1,7 +1,5 @@
 package me.izac.pattern.behavioral.chainofresponsability;
 
-import java.util.Scanner;
-
 public class CaixaEletronico {
     private GavetaControlador gaveta;
 
