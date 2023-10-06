@@ -7,7 +7,7 @@ public class TestFacade {
     public static void main(String[] args) {
         String tableName="Employee";
 
-        //generating MySql HTML report and Oracle PDF report without using Facade
+        //Gerando um relatório do MySql em HTML e um relatório do Oracle em PDF sem utilizar o design Facade
         Connection con = MySqlHelper.getMySqlDBConnection();
         MySqlHelper mySqlHelper = new MySqlHelper();
         mySqlHelper.generateMySqlHTMLReport(tableName, con);
@@ -16,7 +16,7 @@ public class TestFacade {
         OracleHelper oracleHelper = new OracleHelper();
         oracleHelper.generateOraclePDFReport(tableName, con1);
 
-        //generating MySql HTML report and Oracle PDF report using Facade
+        //Gerando um relatório do MySql em HTML e um relatório do Oracle em PDF utilizando o design Facade
         HelperFacade.generateReport(HelperFacade.DBTypes.MYSQL, HelperFacade.ReportTypes.HTML, tableName);
         HelperFacade.generateReport(HelperFacade.DBTypes.ORACLE, HelperFacade.ReportTypes.PDF, tableName);
     }

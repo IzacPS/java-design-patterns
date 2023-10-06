@@ -3,29 +3,29 @@ package me.izac.pattern.behavioral.observer;
 public class TesteObserver {
 
 	public static void main(String[] args) {
-		//create subject
-		MyTopic topic = new MyTopic();
+		//Cria um subject
+		MeuTopico topic = new MeuTopico();
 		
-		//create observers
-		Observer obj1 = new MyTopicSubscriber("Obj1");
-		Observer obj2 = new MyTopicSubscriber("Obj2");
-		Observer obj3 = new MyTopicSubscriber("Obj3");
+		//create os observers
+		Observer obj1 = new MeuTopicoSubscriber("Obj1");
+		Observer obj2 = new MeuTopicoSubscriber("Obj2");
+		Observer obj3 = new MeuTopicoSubscriber("Obj3");
 		
-		//register observers to the subject
+		//registra todos os observers ao topico
 		topic.register(obj1);
 		topic.register(obj2);
 		topic.register(obj3);
 		
-		//attach observer to subject
+		//vincula o topico aos observers
 		obj1.setSubject(topic);
 		obj2.setSubject(topic);
 		obj3.setSubject(topic);
 		
-		//check if any update is available
+		//verifica se há alguma notificação recebida
 		obj1.update();
 		
-		//now send message to subject
-		topic.postMessage("New Message");
+		//envia uma mensagem para todos os subscribers registrados
+		topic.postMessage("Nova mensagem");
 	}
 
 }

@@ -1,20 +1,20 @@
 package me.izac.pattern.behavioral.observer;
 
-public class MyTopicSubscriber implements Observer {
+public class MeuTopicoSubscriber implements Observer {
 	
 	private String name;
 	private Subject topic;
 	
-	public MyTopicSubscriber(String nm){
+	public MeuTopicoSubscriber(String nm){
 		this.name=nm;
 	}
 	@Override
 	public void update() {
-		String msg = (String) topic.getUpdate(this);
+		String msg = topic.getUpdate(this);
 		if(msg == null){
-			System.out.println(name+":: No new message");
+			System.out.println(name+":: Nenhuma nova mensagem");
 		}else
-		System.out.println(name+":: Consuming message::"+msg);
+			System.out.println(name+":: Recebendo mensagem::"+msg);
 	}
 
 	@Override

@@ -1,15 +1,15 @@
-# Padrões de Design - Chain Of Responsability 
+# Padrões de Design - Chain Of Responsability
 
-O padrão de design Chain of Responsibility é usado para evitar o acoplamento 
-entre objetos em uma cadeia onde esses objetos devem processar uma certa requisição. 
+O padrão de design Chain of Responsibility é usado para evitar o acoplamento
+entre objetos em uma cadeia onde esses objetos devem processar uma certa requisição.
 Cada objeto na cadeia tem a capacidade de decidir se ele irá processar a solicitação
 ou se  essa solicitação será enviada para o próximo na objeto na cadeia.
-Como um exemplo desse padrão na linguagem Java. 
+Como um exemplo desse padrão na linguagem Java.
 
-Podemos observar como os blocos try-catch funcionam. Podemos desenvolver para 
-cada bloco catch uma solicitação para processar uma determinada exceção. 
-Se um bloco não conseguir processar a exceção, então esse bloco irá enviar essa 
-solicitação para o próximo bloco catch. E mesmo que nenhum dos blocos consiga 
+Podemos observar como os blocos try-catch funcionam. Podemos desenvolver para
+cada bloco catch uma solicitação para processar uma determinada exceção.
+Se um bloco não conseguir processar a exceção, então esse bloco irá enviar essa
+solicitação para o próximo bloco catch. E mesmo que nenhum dos blocos consiga
 processar a exceção, a solicitação é enviada para o programa principal.
 
 ```java
@@ -18,9 +18,9 @@ public class TryCatch{
         try{
             //Trecho que pode gerar uma exceção
         }catch (NullPointerException e){
-           //Resolver NullPointerException aqui  
+            //Resolver NullPointerException aqui  
         }catch (ArrayIndexOutOfBoundsException e){
-           //Resolver ArrayIndexOutOfBoundsException aqui  
+            //Resolver ArrayIndexOutOfBoundsException aqui  
         }
         //...
     }
@@ -35,7 +35,7 @@ verificar que pode tirar das cédulas de 100 para entregar ao cliente. Nesse cas
 quatro cédulas de 100 são separadas para entregar. Depois de separadas as
 quatro cédulas de 100, 70 Reais ainda precisam ser distribuídos. A gaveta então
 para a responsabilidade de entregar para a próxima repartição já que o valor é
-menor que 100. A próxima repartição possui cédulas de 50 e nesse caso, apenas uma nota de 50 é separada. 
+menor que 100. A próxima repartição possui cédulas de 50 e nesse caso, apenas uma nota de 50 é separada.
 A repartição com cédulas de 50 passa para a próxima
 repartição, agora com cédulas de 20. Essa repartição irá distribuir apenas uma
 nota. Ao final a gaveta irá entregar 4 cédulas de 100, uma de 50 e uma de 20.
@@ -51,11 +51,11 @@ trabalhado.
 ```java
 public class Dinheiro {
     private int quantidade;
-    
+
     public Dinheiro(int quantidade){
         this.quantidade = quantidade;
     }
-    
+
     public int getQuantidade(){
         return this.quantidade;
     }
@@ -114,7 +114,7 @@ public class Cedula100Controlador implements GavetaControlador {
 ```
 
 Agora podemos criar uma corrente de responsabilidades (Chain of Responsability)
-para o nosso caixa eletrônico. Observer o método construtor da classe 
+para o nosso caixa eletrônico. Observer o método construtor da classe
 **CaixaEletronico** que cria uma corrente de responsabilidade.
 
 ```java
@@ -122,7 +122,7 @@ public class CaixaEletronico {
     private GavetaControlador gaveta;
 
     public CaixaEletronico(){
-         GavetaControlador cedula100 = new Cedula100Controlador();
+        GavetaControlador cedula100 = new Cedula100Controlador();
         GavetaControlador cedula50 = new Cedula50Controlador();
         GavetaControlador cedula20 = new Cedula20Controlador();
         GavetaControlador cedula10 = new Cedula10Controlador();
@@ -139,7 +139,7 @@ public class CaixaEletronico {
 }
 ```
 Podemos testar o nosso caixa eletrônico recebendo um valor para saque que
-seja multiplo de 10 e começamos a fazer a separação das cédulas pelo
+seja múltiplo de 10 e começamos a fazer a separação das cédulas pelo
 primeiro elemento na corrente de responsabilidade da gaveta.
 
 ```java
@@ -187,3 +187,5 @@ Retirando 1 cédula(s) de 10R$
 ## Referências
 - https://www.digitalocean.com/community/tutorials/chain-of-responsibility-design-pattern-in-java
 - https://www.devmedia.com.br/design-patterns-entendendo-os-padroes-chain-of-responsibility-command-iterator-mediator-e-memento/29397
+
+

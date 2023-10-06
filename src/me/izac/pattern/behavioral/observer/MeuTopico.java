@@ -3,14 +3,14 @@ package me.izac.pattern.behavioral.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyTopic implements Subject {
+public class MeuTopico implements Subject {
 
 	private List<Observer> observers;
 	private String message;
 	private boolean changed;
 	private final Object MUTEX= new Object();
 	
-	public MyTopic(){
+	public MeuTopico(){
 		this.observers=new ArrayList<>();
 	}
 	@Override
@@ -31,7 +31,6 @@ public class MyTopic implements Subject {
 	@Override
 	public void notifyObservers() {
 		List<Observer> observersLocal = null;
-		//synchronization is used to make sure any observer registered after message is received is not notified
 		synchronized (MUTEX) {
 			if (!changed)
 				return;
@@ -48,8 +47,7 @@ public class MyTopic implements Subject {
 	public Object getUpdate(Observer obj) {
 		return this.message;
 	}
-	
-	//method to post message to the topic
+
 	public void postMessage(String msg){
 		System.out.println("Message Posted to Topic:"+msg);
 		this.message=msg;

@@ -1,8 +1,8 @@
 # Padrões de Design - Command
 
-O padrão de design Command é um modelo do tipo requisição-resposta
+O padrão de design **Command** é um modelo do tipo requisição-resposta
 (request-response) de baixo acoplamento. Nesse modelo, a requisição é enviada
-para um objeto Invoker que por sua vez, passa a requisição para
+para um objeto **Invoker** que por sua vez, passa a requisição para
 encapsulada para um objeto do tipo Command. Depois de receber a
 requisição, o objeto Command passa a requisição para o método
 apropriado executar uma ação específica.
@@ -139,8 +139,8 @@ public class FileInvoker {
 Agora, ao executar o programa precisamos somente escolher qual
 o sistema que arquivo que iremos utilizar de acordo com o sistema
 operacional. Depois, podemos criar um tipo de ação como por exemplo
-abrir um arquivo (OpenFileCommand) e criar um invocador da ação que
-irá ser executado (FileInvoker), injetando a ação nesse objeto.
+abrir um arquivo ``OpenFileCommand`` e criar um invocador da ação que
+irá ser executado ``FileInvoker``, injetando a ação nesse objeto.
 
 ```java
 public class FileSystemClient {
@@ -167,11 +167,11 @@ public class FileSystemClient {
         invoker.execute();
     }
 }
-
 ```
 
-https://medium.com/xp-inc/design-patterns-parte-16-command-9c73af726c9c
-https://www.tutorialspoint.com/design_pattern/command_pattern.htm
-https://www.digitalocean.com/community/tutorials/command-design-pattern
+## Referências
+- https://medium.com/xp-inc/design-patterns-parte-16-command-9c73af726c9c
+- https://www.tutorialspoint.com/design_pattern/command_pattern.htm
+- https://www.digitalocean.com/community/tutorials/command-design-pattern
 
 
