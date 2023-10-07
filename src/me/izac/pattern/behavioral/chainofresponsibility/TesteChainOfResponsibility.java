@@ -1,8 +1,8 @@
-package me.izac.pattern.behavioral.chainofresponsability;
+package me.izac.pattern.behavioral.chainofresponsibility;
 
 import java.util.Scanner;
 
-public class TesteChainOfResponsability {
+public class TesteChainOfResponsibility {
 
     public static void main(String [] args){
         CaixaEletronico caixa = new CaixaEletronico();

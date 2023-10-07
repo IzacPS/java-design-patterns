@@ -1,4 +1,4 @@
-package me.izac.pattern.behavioral.chainofresponsability;
+package me.izac.pattern.behavioral.chainofresponsibility;
 
 public class CaixaEletronico {
     private GavetaControlador gaveta;

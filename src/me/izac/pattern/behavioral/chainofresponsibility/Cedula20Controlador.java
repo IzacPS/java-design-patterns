@@ -1,4 +1,4 @@
-package me.izac.pattern.behavioral.chainofresponsability;
+package me.izac.pattern.behavioral.chainofresponsibility;
 
 public class Cedula20Controlador implements GavetaControlador {
     private GavetaControlador cadeia;

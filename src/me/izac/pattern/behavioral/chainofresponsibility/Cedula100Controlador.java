@@ -1,6 +1,6 @@
-package me.izac.pattern.behavioral.chainofresponsability;
+package me.izac.pattern.behavioral.chainofresponsibility;
 
-public class Cedula50Controlador implements GavetaControlador {
+public class Cedula100Controlador implements GavetaControlador {
     private GavetaControlador cadeia;
     @Override
     public void setProximaCeculaControlador(GavetaControlador proximo) {
@@ -9,10 +9,10 @@ public class Cedula50Controlador implements GavetaControlador {
 
     @Override
     public void retirar(Dinheiro dinheiroAtual) {
-        if(dinheiroAtual.getQuantidade() >= 50){
-            int num = dinheiroAtual.getQuantidade()/50;
-            int resto = dinheiroAtual.getQuantidade() % 50;
-            System.out.println("Retirando " + num + " cédula(s) de 50R$");
+        if(dinheiroAtual.getQuantidade() >= 100){
+            int num = dinheiroAtual.getQuantidade()/100;
+            int resto = dinheiroAtual.getQuantidade() % 100;
+            System.out.println("Retirando " + num + " cédula(s) de 100R$");
             if(resto != 0) this.cadeia.retirar(new Dinheiro(resto));
         }else{
             this.cadeia.retirar(dinheiroAtual);
