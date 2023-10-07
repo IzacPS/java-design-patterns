@@ -2,16 +2,15 @@
 ## Explorando Padrões de Projetos na Prática em Java
 
 Os padrões de design podem ser definidos como uma solução bem descrita para resolver um problema
-comum de software. Podemos nos beneficiar esses padrões já que os padrões de industrias atuais
-de grandes softwares fazem a utilização desses e assim trasendo novas melhorias para esses
-padrões. Os padrões de design também trazem consigo caracteristicas como reusabilidade, 
-cobustez e codigos fáceis de manter, o que gera um menor custo para o produto de software.
+comum de software. Podemos nos beneficiar esses padrões já que os padrões de indústrias atuais
+de grandes softwares fazem a utilização desses e assim trazendo novas melhorias para esses
+padrões. Os padrões de design também trazem consigo características como reusabilidade,
+robustez e códigos fáceis de manter, o que gera um menor custo para o produto de software.
 Como os padrões já são bem definidos, isso facilita a nossa compreensão do mesmo e até a depuração
 durante a produção de software utilizando esses padrões.
 
 Este repositório fornece uma lista com diversos padrões de design e exemplos implementados em
 java.
-
 - **Padrão de design Criacional**
   - [Builder](src/me/izac/pattern/creational/builder)
   - [Factory](src/me/izac/pattern/creational/factory)
